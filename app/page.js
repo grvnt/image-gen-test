@@ -69,12 +69,13 @@ export default function Home() {
       {prediction && (
         <>
           {prediction.output && (
-            <div className="image-wrapper mt-5">
+            <div className="image-wrapper mt-5 w-4/5 max-h-50vh p-4 border-2 border-gray-300 shadow-sm">
               <Image
-                fill
+                layout="responsive"
+                width={500} // adjust this value as needed
+                height={500} // adjust this value as needed
                 src={prediction.output[prediction.output.length - 1]}
                 alt="output"
-                sizes="100vw"
               />
             </div>
           )}
